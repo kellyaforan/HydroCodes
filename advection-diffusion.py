@@ -68,8 +68,7 @@ A2[Nx-1][Nx-2] = 0
 
 #Calculating and plotting the progression of each function through time
 #At each time, the diffusion term is calculated first and then the advection term
-t = 0
-while t < Nt*dt:
+for t in range(0, Nt):
     f1 = np.linalg.solve(A1,f1)
     f2 = np.linalg.solve(A2,f2)
     for j in range(1, Nx-1):
@@ -79,4 +78,3 @@ while t < Nt*dt:
     pl2.set_ydata(f2)
     figure.canvas.draw()
     time.sleep(0.001)
-    t = t+dt
