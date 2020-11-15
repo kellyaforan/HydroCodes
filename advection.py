@@ -45,8 +45,7 @@ ax[1].set_title('Lax-Friedrich')
 figure.canvas.draw()
 
 #Calculating and plotting f1, f2 through time using the FTCS method (f1) and the Lax-Friedrich method (f2)
-t = 0
-while t < Nt*dt:
+for t in range(0, Nt):
     for j in range(1,Nx-1):
         f1[j] = f1[j] - k*(f1[j+1] - f1[j-1])
         f2[j] = 0.5*(f2[j+1]+f2[j-1]) - k*(f2[j+1] - f2[j-1])
@@ -54,4 +53,3 @@ while t < Nt*dt:
     pl2.set_ydata(f2)
     figure.canvas.draw()
     time.sleep(0.001)
-    t = t+dt
