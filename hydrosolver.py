@@ -38,6 +38,8 @@ plt.ion()
 figure = plt.figure()
 pl1, = plt.plot(x, f1, 'b-')
 plt.ylim([-10,10])
+plt.xlabel('Position, x')
+plt.ylabel('Density')
 plt.title('Density along a 1-D Medium')
 figure.canvas.draw()
 
