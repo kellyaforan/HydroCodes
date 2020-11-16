@@ -44,9 +44,12 @@ pl2, = ax[1].plot(x, f2, 'b.')
 ax[0].set_xlim([0,Nx*dx])
 ax[0].set_ylim([0,2*dx])
 ax[0].set_title('D = %1.3f'%D1)
+ax[0].set_xlabel('Position, x')
+ax[0].set_ylabel('Fluid Quantity, f')
 ax[1].set_xlim([0,Nx*dx])
 ax[1].set_ylim([0,2*dx])
 ax[1].set_title('D = %1.3f'%D2)
+ax[1].set_xlabel('Position, x')
 figure.canvas.draw()
 
 #Setting up the matrix for the implicit operator splitting diffusion method 
